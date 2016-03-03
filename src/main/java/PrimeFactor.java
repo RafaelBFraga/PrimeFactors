@@ -9,6 +9,12 @@ public class PrimeFactor {
         List<Integer> primeFactors = new ArrayList<>();
         int divisor = 2;
 
+        calculatesPrimeFactor(dividend, primeFactors, divisor);
+
+        return primeFactors;
+    }
+
+    private void calculatesPrimeFactor(int dividend, List<Integer> primeFactors, int divisor) {
         while(divisor <= dividend) {
             if (dividend % divisor == 0) {
                 dividend = dividend / divisor;
@@ -18,8 +24,6 @@ public class PrimeFactor {
                 divisor++;
             }
         }
-
-        return primeFactors;
     }
 
     public void printList(List primeFactors){
